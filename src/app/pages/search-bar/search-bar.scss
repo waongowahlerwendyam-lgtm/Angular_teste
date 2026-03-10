@@ -1,0 +1,63 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 400px;          /* Ajustez selon vos besoins */
+    width: 100%;
+    border: 1px solid #d1d5db;  /* Bordure grise légère */
+    border-radius: 50px;        /* Forme arrondie */
+    padding: 4px 12px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Effet au focus sur l'ensemble du conteneur */
+  .search-bar:focus-within {
+    border-color: #3b82f6;       /* Bleu professionnel */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 10px 0;
+    color: #1f2937;              /* Texte sombre */
+  }
+  
+  .search-input::placeholder {
+    color: #9ca3af;              /* Gris clair pour le placeholder */
+  }
+  
+  .search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;           /* Pour rendre le bouton rond si souhaité */
+    transition: background-color 0.2s;
+  }
+  
+  .search-button:hover {
+    background-color: #f3f4f6;    /* Léger fond au survol */
+  }
+  
+  .search-icon {
+    fill: #6b7280;                /* Gris pour l'icône */
+    transition: fill 0.2s;
+  }
+  
+  .search-button:hover .search-icon {
+    fill: #3b82f6;                /* Bleu au survol */
+  }
+  
+  /* Option : petite adaptation mobile */
+  @media (max-width: 480px) {
+    .search-bar {
+      max-width: 100%;
+    }
+  }

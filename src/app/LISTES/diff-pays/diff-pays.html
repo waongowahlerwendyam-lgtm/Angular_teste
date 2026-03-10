@@ -1,0 +1,32 @@
+<h2>🌍 Liste des pays  </h2>
+
+@if (loading) {
+  <div class="loading">Chargement des pays ... </div>
+} @else if (error) {
+  <div class="error">❌ {{ error }}</div>
+} @else {
+  <p style="color: #7f8c8d; margin: 20px 0;">
+    📊 {{ countries.length }} pays trouvés
+  </p>
+  
+  <ul class="country-list">
+    @for (country of countries; track country.name.common) {
+      <li class="country-item">
+        <img [src]="country.flags.png" 
+             [alt]="'Drapeau ' + country.name.common">
+        
+        <div class="country-info">
+          <strong>{{ country.name.common }}</strong>
+          
+          @if (country.capital && country.capital.length > 0) {
+            <span class="capital"> - Capitale: {{ country.capital[0] }}</span>
+          } @else {
+            <span class="capital"> - Capitale: inconnue</span>
+          }
+          
+          <span class="population"> - Population: {{ country.population | number }}</span>
+        </div>
+      </li>
+    }
+  </ul>
+}

@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Grille des cartes */
+.corp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Carte */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Conteneur de l'image (placeholder) */
+.card__image-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0;
+}
+
+/* Placeholder circulaire pour les images */
+.card__image-placeholder {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 32px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenu texte */
+.card__content {
+    padding: 16px;
+    flex: 1;
+}
+
+.card__tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+}
+
+.card__title {
+    font-size: 18px;
+    margin: 8px 0 12px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.card__description {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* Pied de carte (auteur + bouton) */
+.card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 12px;
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card__author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card__author-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.card__author-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.card__date {
+    color: #6b7280;
+}
+
+/* Bouton Lire (transformé en lien) */
+.card__button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+.card__button:hover {
+    background: #2563eb;
+}
+
+/* Sections de détail (cachées par défaut) */
+.detail {
+    display: none;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    grid-column: 1 / -1; /* occupe toute la largeur de la grille */
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-content: space-around;
+}  
+.deplier {
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    background: #e1dcd8;
+    padding: 5px;
+    height: 20px;
+    width: auto;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #2563eb;
+    font-size: bold;
+
+}
+.deplier:hover {
+    background:  #2563eb;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+    height: 20px;
+}
+

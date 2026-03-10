@@ -1,0 +1,25 @@
+<!-- todo-list.html -->
+<h2>📋 Liste des tâches</h2>
+
+@if (loading) {
+  <div style="padding: 20px; background: #f0f0f0;">
+    ⏳ Chargement des tâches...
+  </div>
+} @else {
+  <div style="padding: 20px; background: #e8f4e8;">
+    ✅ {{ todos.length }} tâches chargées
+  </div>
+  
+  <ul>
+    @for (todo of todos.slice(0, 10); track todo.id) {
+      <li style="margin: 10px 0;">
+        <input type="checkbox" [checked]="todo.completed" disabled>
+        {{ todo.title }}
+      </li>
+    }
+  </ul>
+  
+  @if (todos.length > 10) {
+    <p>(10 premières tâches sur {{ todos.length }})</p>
+  }
+}

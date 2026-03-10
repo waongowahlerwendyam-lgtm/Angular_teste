@@ -1,0 +1,48 @@
+<section class="corps">
+    <div class="card">
+        <img class="card__image" src="assets/logo1.png" alt="Paysage" style="width: 100px; height: 100px;">
+        
+        <div class="card__content">
+            <span class="card__tag">{{models().titre1}} </span>
+            <h2 class="card__title" (click)="card__title($event)">{{card_title}}</h2>
+            <p class="card__description">
+                {{models().titre2}}
+            </p>
+                      
+            <div class="card__footer">
+                <div class="card__author">
+                    <img class="card__author-avatar" src="assets/logo1.png" alt="Avatar">
+                    <div class="card__author-info">
+                        <span class="card__author-name">{{models().titre3}} </span>
+                        <span class="card__date"> {{models().titre4}} </span>
+                    </div>
+                </div>
+                <button class="card__button"> {{models().titre5}} </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="card__image" src="assets/logo.png" alt="Paysage" style="width: 100px; height: 100px; padding: 10px;">
+        
+        <div class="card__content">
+            <span class="card__tag"> {{Carte().idem}} </span>
+            <h2 class="card__title">{{Carte().i2}} </h2>
+            <p class="card__description">
+                {{Carte().i3}}
+            </p>
+            
+            <div class="card__footer">
+                <div class="card__author">
+                    <img class="card__author-avatar" src="assets/logo.png" alt="Avatar">
+                    <div class="card__author-info">
+                        <span class="card__author-name">{{Carte().i4}} </span>
+                        <span class="card__date">{{Carte().i5}} </span>
+                    </div>
+                </div>
+                <button class="card__button">{{Carte().i6}} </button>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,19 @@
+<section>
+<div class="nav_bar_2">
+    <app-search-bar 
+    (searchboutonclick)="incrementation()" 
+    (searChange)="search_change =$event"/>
+</div>
+<div class="notification">
+    <p>Recherche :{{search_change}}</p>
+    <p>Compteur :{{search_count}}</p>
+</div>
+<div class="serve">
+    <a routerLink="ListesServices" routerLinkActive="active"><button> Clicquez pour voir la listes des services </button></a>
+    <router-outlet></router-outlet> 
+</div>
+</section>
+<section>
+<div>
+</div>  
+</section>
